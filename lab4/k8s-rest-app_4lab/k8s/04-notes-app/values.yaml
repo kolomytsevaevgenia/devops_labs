@@ -1,0 +1,18 @@
+﻿replicaCount: 1
+
+image:
+  repository: myapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+database:
+  host: myapp-db-rw
+  port: "5432"
+  name: myapp
+  user: myapp
+  password: mypassword123

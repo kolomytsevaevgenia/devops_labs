@@ -1,0 +1,10 @@
+﻿apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: EnvoyGateway
+metadata:
+  name: eg
+  namespace: envoy-gateway-system
+spec:
+  gateway:
+    controllerName: gateway.envoyproxy.io/gatewayclass-controller
+  provider:
+    type: Kubernetes
